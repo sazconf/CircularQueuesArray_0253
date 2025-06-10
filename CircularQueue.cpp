@@ -102,29 +102,34 @@ int main() {
     char ch;
 
     while (true) {
-        cout << "\nMenu\n";
-        cout << "1. Insert\n";
-        cout << "2. Delete\n";
-        cout << "3. Display\n";
-        cout << "4. Exit\n";
-        cout << "Enter your choice (1-4): ";
-        cin >> ch;
-        cout << endl;
+        try {
+            cout << "\nMenu\n";
+            cout << "1. Insert\n";
+            cout << "2. Delete\n";
+            cout << "3. Display\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice (1-4): ";
+            cin >> ch;
+            cout << endl;
 
-        switch (ch) {
-            case '1':
-                q.insert();
-                break;
-            case '2':
-                q.remove();
-                break;
-            case '3':
-                q.display();
-                break;
-            case '4':
-                return 0;
-            default:
-                cout << "Invalid input. Please enter 1-4.\n";
+            switch (ch) {
+                case '1':
+                    q.insert();
+                    break;
+                case '2':
+                    q.remove();
+                    break;
+                case '3':
+                    q.display();
+                    break;
+                case '4':
+                    return 0;
+                default:
+                    cout << "Invalid input. Please enter 1-4.\n";
+            }
+        }
+        catch (exception &e) {
+            cout << "Check for the values entered. Error: " << e.what() << endl;
         }
     }
 }
