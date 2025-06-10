@@ -121,6 +121,29 @@ int main(){
             cout<< "Enter your chocie (1-4): " ;
             cin >> ch;
             cout << endl;
+
+            switch(ch){
+                case '1':
+                    {
+                        q.insert();
+                        break;
+                    }
+                case '2' :
+                    {
+                        q.remove();
+                        break;
+                    }
+                case '3' :
+                    {
+                        q.display();
+                    }
+                case '4' :
+                    {
+                        return 0;
+                    }
+
+
+            }
         }
     }
 }
